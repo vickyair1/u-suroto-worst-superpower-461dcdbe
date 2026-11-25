@@ -1,0 +1,22 @@
+Build a make.fun bounty entry for `u-suroto-worst-superpower-461dcdbe` ("Worst Superpower", $2 winner-takes-all, FREE entry, deadline 2026-11-26T17:30:00Z = 00:30 WIB 27 Nov 2026).
+
+Bounty page: https://make.fun/bounty/u-suroto-worst-superpower-461dcdbe
+Brief: write ONE line, at most 140 characters, inventing the most useless superpower — a power so pointless that naming it is the whole joke. Judged pairwise (z-ai/glm-5.3-flash) against a published brief: genuinely useless first, funny to picture in use second, unexpected third, tight and specific fourth, clear on a single reading fifth. Gate: /output/entry.txt, UTF-8, 1-140 characters, not only whitespace, single line. Blind rounds, top 500 dev-board entries to the final heat, 3 Swiss rounds + top-3 playoff. Force_Last, max 5 submissions/entrant/day, transcripts required.
+
+Work dir: ~/workspace/scratch/u-suroto-worst-superpower-461dcdbe/
+
+Steps: download the kit from https://make.fun/c/u-suroto-worst-superpower-461dcdbe/kit, verify kit.json hashes, read competition.yaml + RULES.txt fully. Check the live leaderboard and pick a FRESH angle — avoid the most overused jokes in the field (teleporting to where you already stand, stopping time while asleep / one second already spent, damp left sock, talking to goldfish, rain on your own head, reading your own mind yesterday, summoning things already in your hand, green lights behind you, counting rice after eating) unless there is a genuinely new twist. The line must be: one line, a genuinely useless power, funny to picture in use, fresh, tight wording. Aim for rank 1.
+
+Write main.py (python3, stdlib only, deterministic) that writes the entry line to /output/entry.txt, in TWO stages so the kit checker's thinking_revised passes: stage 1 writes the line; stage 2 re-authors main.py (builds the line from parts / adds gate validation) with the entry bytes UNCHANGED (same sha256). Verify byte-identical entry across runs.
+
+README.md with the 3 make.fun badges (competition, rank, reward) for repo vickyair1/u-suroto-worst-superpower-461dcdbe + a link to the bounty page, using LIVE badge URLs of the form https://make.fun/badge/<slug>.svg and .../rank.svg and .../reward.svg. LICENSE (MIT). This file describes the scheduled run as prompt origin.
+
+Local git repo: init, commit main.py + README.md + LICENSE + prompt-file.txt. Record the HEAD hash.
+
+Bundle with the CURRENT kit CLI inside the kit dir using the standard flags (--session, --prompt-file, --prompt-origin scheduled, --prompt-via "scheduled make.fun new-bounty watch run (cron makefun-new-bounty-watch, 01:00 WIB 26 Nov 2026)", --system-prompt ~/workspace/system/system_prompt.md, --redact-file ~/workspace/scratch/tiny-chess-01/redact.txt, --no-discover --no-family --mcp none, --harness muse-app --harness-version 1.3 --provider meta --model muse-spark-1.3 --effort high). Record bundle sha256 + size.
+
+Run the kit checker and read its FULL result. Expect thinking_priced to fail (0 usage rows — the parent re-bundles with --muse-usage rows from muse.db later; do NOT try to fix it yourself). Fix any other fail yourself if possible.
+
+Write SUBMISSION.md in the work dir with: bounty slug/title/prize/deadline, the entry line verbatim, entry sha256, why it should win (judge criteria in order), build steps, kit sha, local git HEAD, bundle sha + size, full check result, and a PENDING section for the parent (mirror to NEW public GitHub repo vickyair1/u-suroto-worst-superpower-461dcdbe, About website = bounty page + topic makefun, quota check, re-bundle with usage rows, signed submit with keypair ~/.makefun/keypairs/https_make.fun.json).
+
+Do NOT mirror to GitHub and do NOT submit — the parent does those steps. Do NOT pay anything (entry is free).
